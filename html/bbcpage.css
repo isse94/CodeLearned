@@ -1,0 +1,102 @@
+
+
+#topbar { width: 1000px; margin: 0 auto;
+  height: 40px}
+
+  body { margin: 0; padding: 0;
+   font-family: Helvetica, Arial, sans-serif }
+
+  #logo { margin-top:8px ; width: 100px; float:left;
+   margin-right: 8px}
+
+  .topbar-section {float: left; border-left: 1px #cccccc solid;
+    height: 100% }
+
+  #signinimg { width: 25px; margin: 11px 15px; float: left;}
+
+  #signin-text {font-weight: bold; font-size: 90%;
+    position: relative; top: 14px; padding-right: 60px}
+
+#wigglyline { float: left; height: 40px;
+}
+
+  #bell {height: 25px; margin: 8px 9px; }
+
+  #bell-div { float: left;}
+
+  .topbar-menu  {font-weight: bold;
+    font-size: 90%; padding: 13px 15px 0px; height: 27px}
+
+    #more-arrow {height: 10px; margin-left: 15px}
+
+    #search-bar {background: #E4E4E4;
+        border: none; font-weight: bold; font-size: 14px;
+    ; margin: 10px 0px 5px 10px ; float: left}
+
+        #mag-glass { height: 19px; margin: 10px 0px 10px; float: left;
+            }
+
+
+#redbar1 { background-color: #BB1919; width: 1536px; margin-top: 5px;
+      height: 57px }
+
+    .news-text {float: left; margin: 5px 0px 5px 268px;font-size: 40px; color: white  }
+
+      #local-news  {color: white; float: right;
+      margin-right: 400px; margin-top: 5px;margin-bottom: 2px ;border-style:solid; border-color: #BB4545;
+    border-width: thin; font-size: 40px; height: auto;text-decoration: none;;}
+
+    .find-local-news {color: white; text-decoration: none;}
+    .find-local-news:hover {text-decoration: underline;}
+
+      #pointer { height: 40px; margin-right: 15px;}
+
+      #nav-bar {background-color: #A91717; width: auto; height:28.5px;
+            }
+
+      .nav-menu  {float: left; margin: 5px 0px 5px 15px; color: white; font-size:14px; border-right: solid;
+      border-width: thin; border-color: #BB4545; padding-right: 10px}
+      #clear-left-menu {margin-left: 245px}
+
+      #menu-tab-link {color: white; text-decoration: none;
+      }
+      #menu-tab-link:hover {border-bottom: solid; border-width: 4px;
+      }
+
+      #menu-more-tab {border: none}
+      #more-down-arrow {float: right; height: 10px; margin: 2px 5px 0px 15px;}
+
+
+      #tech-heading {margin-left: 270px; margin-bottom: 40px}
+      .tech-heading {font-weight: normal; font-size: 20px;
+        border-bottom: 2px solid #A91717; position: absolute;}
+        #tech-main-content {margin-left: 270px; margin-bottom: 70px; float: left;
+        display: block; float: left; border-right: 1px solid #CCCCCC}
+        #h1-heading {margin-bottom: 40px}
+        .p1 {color: #5a5a5a; margin-bottom: 0px; margin-top: 0px; width: 250px}
+
+        #asda-img {height: 220px; float: left ; margin-left: 285px;
+          margin-top: -260px; margin-right: 20px}
+        #clock {height: 15px}
+        #p2tech-link {text-decoration: none; color: #a91717; border-left: 1px solid #CCCCCC; padding-left: 10px; cursor: pointer;}
+        #p2tech-link:hover {color: blue; position: relative;}
+        #article-hr {float: left; border-top: 1px solid #a91717; width: 50px;
+          margin-left: 0px; margin-bottom: 1px}
+        .surveillance-firm {position: relative;text-decoration: none; color: black}
+        .eBay {position: relative;text-decoration: none; color: black; }
+
+        #h3-watch-listen {font-weight: normal; margin-left: 985px; margin-top: 70px}
+        .watch-listen-topics { margin-left: 1070px; width: 200px; }
+
+        .date-watch-listen {color: #5a5a5a; width: 300px; margin-left:110px ; position: relative;}
+        #science-article {float: left; height: 50px; margin-left: -85px; margin-right: 10px}
+        #drone-article {float: left; height: 50px; margin-left: -85px; margin-right: 10px;}
+        #space-article {float: left; height: 50px; margin-left: -85px; margin-right: 10px}
+
+
+        #drone-article-tech-link {text-decoration: none; color: #a91717; margin-left:110px ; position: relative;}
+        .drone-article-tech-link {margin-top: 0px}
+        #space-article-tech-link {text-decoration: none; color: #a91717; margin-left:110px ; position: relative;}
+        .space-article-tech-link {margin-top: 0px}
+        #h3-watch-listen-links {text-decoration: none; color: black}
+        #h3-watch-listen-links:hover {color: blue}

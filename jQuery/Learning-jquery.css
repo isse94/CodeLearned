@@ -1,0 +1,103 @@
+
+body {
+font-family: "Assistant",sans-serif;
+font-size: 55%
+}
+/* Mini project */
+
+.label1 {
+font-size: 200%;
+position: relative;
+top: 12px;
+width: 145px;
+float: left;
+}
+
+.input1 { height: 40px; padding: 5px 5px 12px 5px;
+  font-size: 20px;
+  border-radius: 5px;
+  border-radius: 1px solid grey;
+  width: 320px
+}
+
+#wrapper { width: 500px;
+  margin: 0 auto;
+
+}
+
+.form-element {
+  margin: 10px
+}
+
+#signUp {
+  width: 130px;
+  margin-left: 145px
+}
+
+#errorMessage {color: red; }
+#successMessage { color: green; display: none;}
+
+
+
+
+
+
+
+
+
+
+
+#circle { background-color: green; height: 100px; width: 100px; border-radius: 50%; margin: 10px
+}
+
+ .square {background-color: red; width: 100px; height: 100px; margin: 10px
+ }
+
+#fadeInPara{
+  display: none;
+}
+
+#hint {display: none;}
+
+#hint2{display: none}
+
+
+
+
+#circle2 {
+height: 150px; width: 150px;
+border-radius: 50%; background-color: blue
+}
+
+
+#label1 {
+  position: relative;
+}
+
+
+#draggable {width: 150px; height: 150px; padding: 0.5em; color: red}
+
+#draggable2 {width: 150px; height: 150px; padding: 0.5em; color: green}
+
+#containment-wrapper { width: 95%; height:150px; border:2px solid #ccc; padding: 10px; }
+#draggable3 {width: 45px; height: 5px; padding: 0.5em; color: red}
+
+#draggable0 {width: 75px; height: 75px; padding: 0.5em; color:pink}
+
+
+#resizable { width: 150px; height: 150px; padding: 0.5em; }
+#resizable h3 { text-align: center; margin: 0; }
+
+
+#bigS { width: 400px; height: 300px; background-color: red
+
+}
+
+#littleS {
+ width: 100px; height: 100px; background-color: yellow;
+}
+
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em; }
