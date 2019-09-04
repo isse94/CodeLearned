@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <title> jQuery </title>
+
+
+
+    <link rel="stylesheet" href="jquery.css">
+    <link href="jquery-ui/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="jquery-ui/jquery-ui/jquery-ui.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="circle">
+    </div>
+
+    <div class="square">
+
+    </div>
+
+    <div class="square">
+
+    </div>
+
+  <p id="fadePara" > hi there i love playing football however watching it is sometimes boring. <button type="button" name="button" id="b1" >FadeOUTDaTing</button>
+  </p>
+
+  <p id="fadeInPara"> fade this back in you wasteman... knowbest kmt </p> <button type="button" id="b2">FadeIn</button>
+
+  <p id="hint"> FADE ME IN AND FADE ME OUT NOW! </p> <button type="button" name="button" id="b3">Toggle</button>
+
+  <p id="hint2"> AHHHH ARE YOU FADING ME IN THEN OUT SMH!! </p> <button type="button" name="button" id="b4">ToggleMe</button>
+
+
+<p>PART 13 ONWARD</p>
+
+<div id="circle2">
+
+</div> <p> <button type="button" name="button" id="circleButton"> Click me </button> </p>
+
+
+ <p></p>
+
+ <div id="draggable" class="ui-widget-content">
+   drag me around
+ </div>
+
+ <div id="draggable2" class="ui-widget-content">
+   drag me around left  or right
+ </div>
+
+ <h3>Or to within another DOM element:</h3>
+ <div id="containment-wrapper">
+  <div id="draggable3" class="draggable ui-widget-content">
+    <p>I'm contained within the box</p>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="draggable ui-widget-content" id="draggable0">
+      <p id="draggable4" class="ui-widget-header">I'm contained within my parent</p>
+    </div>
+
+  </div>
+
+  <div id="resizable" class="ui-widget-content">
+    <h3 class="ui-widget-header">Resizable</h3>
+  </div>
+<p></p>
+<p></p>
+<br>
+
+<div class="">
+
+</div>
+<div id="bigS">
+
+</div>
+
+<div id="littleS">
+
+</div>
+</div>
+
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div class="">
+    <p> Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+  </p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>
+    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+    </p>
+  </div>
+  <h3>Section 3</h3>
+  <div>
+    <p>
+    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+    </p>
+    <ul>
+    <li>List item one</li>
+    <li>List item two</li>
+    <li>List item three</li>
+  </ul>
+
+  </div>
+  <h3>Section 4</h3>
+    <div>
+      <p>
+      Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+      et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+      mauris vel est.
+      </p>
+      <p>
+      Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+      Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+      inceptos himenaeos.
+      </p>
+    </div>
+
+</div>
+
+
+<ul id="sortable">
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+
+    <script type="text/javascript">
+
+    $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+
+
+    $(function(){
+      $("#accordion").accordion();
+    });
+
+
+
+
+    $( function() {
+    $( "#littleS" ).draggable();
+    $( "#bigS" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          alert("inside");
+      }
+    });
+  } );
+
+
+
+
+
+  $("#resizable").resizable({
+    grid:50,
+    resize: function(event,ui) {
+      if ($("#resizable").width() > 300) {
+        alert ("big enough!")
+      }
+    }
+  })
+
+    $( function() {
+    $( "#draggable" ).draggable();
+
+    $( "#draggable2").draggable({ axis: "x" });
+
+    $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+
+    $( "#draggable4" ).draggable({ containment: "parent" });
+
+    } );
+
+
+
+
+
+
+
+
+    $("#b1").click( function(){
+
+    $("#fadePara").fadeOut();
+
+  });
+
+    $("#b2").click(function(){
+
+    $("#fadeInPara").fadeIn();
+    $("#fadeInPara").fadeIn()
+
+    })
+
+    $("#b3").click(function(){
+
+    if ($("#hint").css("display") == "none") {
+      $("#hint").fadeIn();
+    }
+      else {
+        $("#hint").fadeOut();
+      }
+    })
+// OR
+    var textAppearance
+    $("#b4").click(function(){
+      if (textAppearance == true) {
+        $("#hint2").fadeOut(function(){
+          textAppearance = false;
+        })
+      }
+      else {
+        $("#hint2").fadeIn(function(){
+          textAppearance = true;
+        })
+      }
+    })
+
+// Part 13 onwards of the course
+
+  $("#circleButton").click(function(){
+    $("#circle2").css("background-color","red");
+
+  });
+      $("#circle2").click(function(){
+    $(this).animate({
+      width:"400px",
+      height: "400px",
+    }, 2000,  function(){
+      $(this).css("background-color","red");
+    });
+})
+
+/* Part 15 : AJAX ( ONLY WORKS FOR ONLINE SERVERS / LIVE SERVERS)
+
+  $.get("info.text"), function(data) {
+    alert(data);
+  }
+
+  // IF .get Request fails e.g. (user has no internet connection we need to return a message to server OR we could connect them to that page once they e.g. have internet)
+
+  $.get("info.text").done(function(data){
+  e.g. alert(data);
+}).fail(function(){
+alert("couldnt get data");
+})
+  OTHER SETTINGS WE CAN MAKE BY SEARCHING AJAX ON GOOGLE
+  END OF PART 15. */
+
+
+
+
+
+
+
+/* PART 17 - REGULAR EXPERESSION (REGEX) :  var regex = /O/ig ;
+
+  var string = "jQuery is soooo long!";
+
+  var result = string.match (regex);
+
+  alert(result); */
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+  </body>
+
+
+</html>
