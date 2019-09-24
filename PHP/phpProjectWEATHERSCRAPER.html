@@ -1,4 +1,4 @@
-<!-- WEATHER Scraper PROJECT PART 25
+<!-- WEATHER Scraper -->
 <?
 
   $weather = "";
@@ -42,7 +42,7 @@ $error = "That city could not be found."
 }
 
 ?>
- -->
+
 
 <!doctype html>
 <html lang="en">
@@ -71,14 +71,14 @@ $error = "That city could not be found."
     <label for="city">Enter the name of a city.</label>
     <input name="city" type="text" class="form-control" id="city"
   placeholder="Eg. London, Tokyo" >   <!-- ADD TO KEEP USER CITY IN INPUT SO USER CAN SEE WHAT THEY HAVE SEARCHED
-    & GET RID OF NOTICE: TEXT.. INSIDE INPUT BY...   value="<?php
+    & GET RID OF NOTICE: TEXT.. INSIDE INPUT BY...  -->  value="<?php
 
     if (array_key_exists('city', $_GET)) {
 
     echo $_GET['city'];
-    
+
       }
-     ?> "  -->
+     ?> "
 
   </fieldset>
 
@@ -86,7 +86,7 @@ $error = "That city could not be found."
 </form>
 
   <div id="weather">
-    <!-- DISPLAY WEATHER UNDER SUBMIT BUTTON BY --  <?php
+    <!-- DISPLAY WEATHER UNDER SUBMIT BUTTON BY -- -->  <?php
     if ($weather) {
       echo '<div class="alert alert-secondary" role="alert">
   '.$weather.'
@@ -98,7 +98,7 @@ DISPLAYs error UNDER SUBMIT BUTTON BY    else {
   '.$error.'
 </div>'
   }
-    ?>-->
+    ?>
   </div>
 
     </div>
