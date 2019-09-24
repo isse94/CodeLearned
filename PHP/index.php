@@ -99,9 +99,75 @@ while ($i < sizeof($colors)) {
   $i++;
 }
 
+echo "<br> </br>";
+
+/* PART 15 GET VARIABLES
+print_r($_GET);
+
+if ($_GET) {
+
+$i = 2;
+$isPrime = true;
+while ($i < $_GET ['number']) {
+  if($_GET['number'] % $i = 0) {
+    //not a prime number
+    $isPrime = false
+  }
+  $i++;
+}
+if ($isPrime) {
+  echo "<p>".$i."is a prime number </p>";
+}
+
+else {
+  echo "<p>".$i."isnt a prime number </p>";
+}
+SEE MY WORK BOOK FOR MORE INFO!!!
+}
+*/
+
+
+
+/*  print_r($_POST);
+
+if ($_POST) {
+  $family2 = array("Ronaldo" ," Messi","Neymar" );
+  $isKnown = false;
+  foreach ($family2 as $value) {
+  if ($value == $_POST['name2']) {
+    $isKnown = true;
+  }
+  }
+  if ($isKnown) {
+  echo "Hi there".$_POST['name2']."!";
+  }
+  else {
+    echo "i dont know you?!";
+  }
+} SEE PART 17 OF MY WORK BOOK! */
 
 
 
 
+/*SEE PART 17 OF MY WORK BOOK! 
+$emailTo = "isse@hotmail.com";
+$subject = "i hope youre well";
+$body = "i hope i see u soon";
+$headers = "man-united@hotmail.com";
 
+if (mail($emailTo,$subject,$body,$headers)) {
+  echo "email was sent";
+}
+else {
+  echo "email wasnt sent mateee";
+}
+SEE PART 19 OF MY WORK BOOK! */
 ?>
+
+
+
+<form method="post" class="" action="index.html" method="post">
+  <p>whats your name?</p>
+<p> <input type="text" name="name2" value=""> </p>
+<p>   <input type="submit" name="" value="submit"> </p>
+</form>
