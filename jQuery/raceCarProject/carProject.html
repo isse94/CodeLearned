@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>carProject</title>
+
+    <link rel="stylesheet" href="carProject.css">
+    <link href="../jquery-ui/jquery-ui/jquery-ui.css" rel="stylesheet">
+
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script src="../jquery-ui/jquery-ui/jquery-ui.js"></script>
+
+  </head>
+
+  <body>
+
+    <h1> Race of the century</h1>
+
+    <!--  -->
+    <div id="startResetRace">
+
+      <p> <span id="raceButton">Race!</span> <span id="resetButton">Reset</span>  </p>
+
+    </div>
+
+    <!--  -->
+
+    <div id="raceTrack">
+
+      <img class="car car1" id="car1Img" src="img/car1.png" alt="">
+      <img class="car car2" id="car2Img" src="img/car2.png" alt="">
+
+    </div>
+
+    <!--  -->
+
+    <div id="raceInfo">
+
+      <h3 id="h3Result"> RESULTS! </h3>
+      <hr>
+
+      <div id="car1Table"> <h2>Car 1</h2> <p class="bothResults" id="car1Results"></p> </div>
+      <div id="car2Table"> <h2>Car 2</h2> <p class="bothResults" id="car2Results"></p> </div>
+
+
+    </div>
+
+
+
+    <script src="jqueryCar-2.1.4.min.js"></script>
+
+    <script type="text/javascript">
+
+
+
+      $("#raceButton").click(function(){
+        var start = new Date().getTime();
+
+        var generateRandomNumber = Math.random() * 8000
+        var RandomCar1SpeedTime = Math.floor(Math.random() * generateRandomNumber) + 500;
+        var RandomCar2SpeedTime = Math.floor(Math.random() * generateRandomNumber) + 500;
+        var raceTrackWidth = $("#raceTrack").width() - $(".car").width() + 12 ;
+            $(".car1").animate({left: raceTrackWidth}, RandomCar1SpeedTime, function() {
+
+              if (RandomCar1SpeedTime > RandomCar2SpeedTime ) {
+                $("#car1Results").html("Finished Second Place " + RandomCar1SpeedTime / 1000 + " seconds");
+              } else {
+              $("#car1Results").html("Finished First Place " + RandomCar1SpeedTime / 1000 + " seconds");
+              };
+
+        });
+            $(".car2").animate({left: raceTrackWidth}, RandomCar2SpeedTime, function() {
+
+              if (RandomCar2SpeedTime > RandomCar1SpeedTime ) {
+                $("#car2Results").html("Finished Second Place " + RandomCar2SpeedTime / 1000 + " seconds");
+              } else {
+              $("#car2Results").html("Finished First Place " + RandomCar2SpeedTime / 1000 + " seconds");
+              };
+
+        });
+
+
+
+
+
+      });
+
+      $("#resetButton").click(function(){
+        $('.car').css('left','0');
+      $(".bothResults").html('');
+    });
+
+
+    </script>
+
+  </body>
+
+</html>
