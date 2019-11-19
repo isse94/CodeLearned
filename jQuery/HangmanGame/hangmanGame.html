@@ -86,7 +86,8 @@
 	// Draw squares for secret word & hide letters
 	for(var i = 0; i < randomWord.length; i++) {
         $('#container').append('<div class="letter ' + i + '"></div>');
-        $('#container').find(":nth-child(" + (i) + ")").text(randomWordArray[i]);
+        $('#container').find(":nth-child(" + (i+1) + ")").text(randomWordArray[i]);
+        
         // ^ selects all of elements in last child (the div above) and replaces its text with whatever randomised word that is made.
         $(".letter").css("color", "#4ABDAC");
     }
@@ -102,7 +103,7 @@
         var userGuess = $(this).text();
         for (var i = 0; i < randomWord.length; i++) {
             if (userGuess === randomWord.charAt(i)) {
-                $('#container').find(":nth-child(" + (i) + ")").css("color", "#EFEFEF").addClass("winner");
+                $('#container').find(":nth-child(" + (i+1) + ")").css("color", "#EFEFEF").addClass("winner");
                 matchFound = true;
             }
         }
