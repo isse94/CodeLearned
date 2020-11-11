@@ -216,43 +216,194 @@
 //////////////////////////////////////
 
   //3Sum ----
- var nums = [-1, 0, 1, 2, -1, -4];
- var target = 0;
+//  var nums = [-1, 0, 1, 2, -1, -4];
+//  var target = 0;
+//  var results = [];
+//
+//  var threeSum = function(nums) {
+//   nums = nums.sort((a, b) => a - b); // [-4,-1,-1,0,1,2]
+//
+//   for(let i = 0; i < nums.length - 3; i++){ // [0],[1],[2]
+//
+//    if(i == 0 || nums[i] > nums[i-1]){
+//      var start = i + 1;
+//       var end = nums.length - 1;
+//
+//        while (start < end) {
+//            if (nums[i] + nums[start] + nums[end] == 0 ){
+//                var result = ([nums[i], nums[start],nums[end]]);
+//                results.push(result);                                    // collect if = 0
+//            }
+//            if(nums[i] + nums[start] + nums[end] < 0){
+//                var currentStart = start;
+//                while(nums[currentStart] == nums[start] && start < end){
+//                    start++                                                  // increment start if sum < 0
+//                }
+//            }
+//            else { var currentEnd = end;                                   // decrement end if sum > 0
+//                  while(nums[currentEnd] == nums[end] && start < end){     // while
+//                      end--
+//
+//              }
+//
+//            }
+//        }
+//
+//
+//    }
+//
+//    }
+// return results;
+//
+// };
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// MY FINAL VERSION 2SUM
+var nums = [2,7,11,15] ;
+ var target = 9;
  var results = [];
+ // function twoSum (nums, target) {
+ //   // nums = nums.sort((a,b) => a-b);
+ //   for (let i = 0; i < nums.length; i++) {
+ //     var firstCount = nums[i];
+ //     var secondCount = nums[i+1];
+ //     var start = nums[0];
+ //     var end = nums.length - 1;
+ //     // console.log(nums.indexOf(start));
+ //     // console.log(end);
+ //     var sum = firstCount + secondCount;
+ //    if (sum === target) {
+ //      var firstIndex = nums.indexOf(firstCount);
+ //      // console.log(firstIndex);
+ //      var secondIndex = nums.indexOf(secondCount);
+ //      // console.log(secondIndex);
+ //      var resultFound = [firstIndex, secondIndex];
+ //      // console.log(resultFound);
+ //      results.push(resultFound);
+ //    }
+ //
+ //   }
+ // };
+ // twoSum(nums, target);
+ // console.log(results);
 
- var threeSum = function(nums) {
-  nums = nums.sort((a, b) => a - b); // [-4,-1,-1,0,1,2]
-
-  for(let i = 0; i < nums.length - 3; i++){ // [0],[1],[2]
-
-   if(i == 0 || nums[i] > nums[i-1]){
-     var start = i + 1;
-      var end = nums.length - 1;
-
-       while (start < end) {
-           if (nums[i] + nums[start] + nums[end] == 0 ){
-               var result = ([nums[i], nums[start],nums[end]]);
-               results.push(result);                                    // collect if = 0
-           }
-           if(nums[i] + nums[start] + nums[end] < 0){
-               var currentStart = start;
-               while(nums[currentStart] == nums[start] && start < end){
-                   start++                                                  // increment start if sum < 0
-               }
-           }
-           else { var currentEnd = end;                                   // decrement end if sum > 0
-                 while(nums[currentEnd] == nums[end] && start < end){     // while
-                     end--
-
-             }
-
-           }
-       }
+//OR
+function twoSum(nums, target) {
+  for (var i = 0; i < nums.length; i++) {
+    var firstCount = nums[i];
+    // console.log(firstCount);
+    for (var j = i+1; j < nums.length; j++) {
+      var secondCount = nums[j];
+      var sum = firstCount + secondCount;
+      if (sum === target) {
+        var result = [nums.indexOf(firstCount), nums.indexOf(secondCount)];
+        console.log(result);
+        results.push(result);
+      } // end of if
+    } // second forloop
+  } // first forloop
 
 
-   }
+}
 
-   }
-return results;
+twoSum(nums, target);
+console.log(results);
 
-};
+
+
+ // console.log(results);
+
+// let nums = [2,7,11,15] ;
+// let target = 9;
+// let results = [];
+// const twoSum = (nums, target) => {
+//     nums = nums.sort((a,b) => a-b);
+//     for(let i=0; i<nums.length; i++){
+//         var start = nums[0];
+//         var end = nums[i];
+//         var sum = start + end;
+//         if(sum === target) {
+//             var result = [nums[start],nums[end]]
+//             results.push(result)
+//         }
+//     }
+//     return result
+// };
+//
+//  twoSum(nums, target);
+//  console.log(results);
+
+
+// /// MY FINAL VERSION 3SUM
+// var nums = [-1,0,1,2,-1,-4] ;
+// var result = [];
+//
+// function threeSum(nums) {
+// nums = nums.sort((a,b) => a-b);
+//
+//
+// for (var i = 0; i < nums.length -3 ; i++) {
+// // console.log(nums[i]); // -4-1-1
+// var leftSide1 = nums[i]; //
+// var leftSide2Index = i+1;
+// // console.log(nums[leftSide2Index]);
+// var rightSideIndex = nums.length -1;
+// // console.log(nums[i]);
+// if (nums[i-1] < nums[i]) {
+//
+// while (leftSide2Index < rightSideIndex) {
+//   var sum = leftSide1 + nums[leftSide2Index] + nums[rightSideIndex];
+//   if (sum === 0) {
+//     var resultsFound = [leftSide1, nums[leftSide2Index], nums[rightSideIndex] ];
+//     result.push(resultsFound);
+//   }
+// if (sum < 0 ) {
+//   var currentLeftSide2Index = leftSide2Index;
+//   while (currentLeftSide2Index == leftSide2Index && leftSide2Index < rightSideIndex) {
+//     leftSide2Index ++;
+//   }
+// }
+// else {
+//   var currentRightsideIndex = rightSideIndex;
+//   while (currentRightsideIndex == rightSideIndex && leftSide2Index < rightSideIndex) {
+//     rightSideIndex--;
+//   }
+// }
+//
+//
+// }
+//
+//
+// } // if1
+// }  // end of for loop
+// }  // end of function
+//
+// threeSum(nums);
+// console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //
