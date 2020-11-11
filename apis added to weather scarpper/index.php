@@ -19,7 +19,7 @@
 
         } else {
 
-            $error = "Could not find city - please try again. ";
+            $error = "Could not find city - please try again. "; 
 
         }
 

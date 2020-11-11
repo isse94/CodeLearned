@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+
+
+
+
+
+    <script type="text/javascript">
+//    <script src="script.js"> ..... EXTERNAL JS
+var persons = [
+{name :'marko',
+height : 7,
+mass: 73,
+},
+{name: 'john',
+height: 6,
+mass: 80,
+}
+];
+var bmiMark = persons[0].mass / (persons[0].height * persons[0].height);
+var bmiJohn = persons[1].mass / (persons[1].height * persons[1].height);
+console.log(bmiMark);
+console.log(bmiJohn);
+
+var isTrue = bmiMark > bmiJohn;
+console.log('true or false? mark\'s bmi is > john\'s bmi?.. '+ isTrue);
+
+if (bmiMark > bmiJohn) {
+  console.log('mark\'s bmi is greater than john\'s bmi');
+}
+else {
+    console.log('mark\'s bmi is less than john\'s bmi');
+}
+
+// SECTION 2 PART 18 : code challenge 2
+
+var basketBall = [
+{name: 'teamJohn',
+score: [89,120,103],
+// averageScore: 104,
+
+},
+{name: 'teamMike',
+  score:[116, 94, 123],
+  // averageScore: 111,
+}
+]
+var johnTeamAverage = (basketBall[0].score[0] + basketBall[0].score[1] + basketBall[0].score[2]) / 3 ;
+var mikeTeamAverage = (basketBall[1].score[0] + basketBall[1].score[1] + basketBall[1].score[2]) / 3 ;
+
+
+if (johnTeamAverage > mikeTeamAverage) {
+console.log('john\'s team has an average score of ' + johnTeamAverage +' which is a better average score than mike\'s team')
+}
+else if (johnTeamAverage === mikeTeamAverage) {
+  console.log('john\'s and mike\'s have the same average score which is ' + johnTeamAverage);
+}
+else {
+console.log('mikes\'s team has an average score of ' + mikeTeamAverage + ' which is a better average score than john\'s team');
+}
+
+function calAverageScore(team, teamName) {
+  return ((team.score[0] + team.score[1] + team.score[2]) / 3) + ' ' +  teamName ;
+}
+
+var jTeamAvg= calAverageScore(basketBall[0], basketBall[0].name);   //FUNCTION MAKE ^ EASIER instead of having to keep writing the code .e.g. averagescore for jhn every time sepeatly
+var mTeamAvg= calAverageScore(basketBall[1], ' '); //can pass MORE THAN 1 arguement.
+console.log(jTeamAvg, mTeamAvg);
+
+//function Decleration e.g.
+var whatTOdo = function (job, firstName) {
+  switch (job) {
+    case 'teacher':
+      return firstName + ' teachers how to drive';
+      break;
+      case 'driver':
+        return firstName + 'is an uber driver';
+        break;
+    default:
+    return firstName + ' occupation not found';
+    break;
+
+  }
+}
+console.log(whatTOdo('teacher', 'Bob'));
+
+// Part 23 challenge 3
+
+var tip = [124, 48, 268];
+var totalCost = [];
+
+function howMuchHaveITiped (tips) {
+  for (var i = 0; i < tips.length; i++) {
+    // console.log(tips[i]);
+ if (tip[i] < 50) {
+ var calTip1 = tip[i] * 0.2;
+ var result = calTip1 + tip[i];
+    // console.log(result);
+totalCost.push(result);
+  }
+  if (tip[i] >= 50 && tip[i] < 200) {
+    var calTip2 = tip[i] * 0.15;
+     var result2 = calTip2 + tip[i];
+    totalCost.push(result2);
+  }
+
+else if (tip [i] >= 200) {
+
+  var calTip3 = tip[i] * 0.10;
+   var result3 = calTip3 + tip[i];
+  totalCost.push(result3);
+    }
+
+} //END of LOOP
+
+}
+howMuchHaveITiped(tip);
+console.log(totalCost);
+
+
+    </script>
+
+  </body>
+</html>

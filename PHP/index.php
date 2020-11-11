@@ -7,7 +7,7 @@ echo $name;
 $string1 = " <p>    hi there, ";
 $string2 = "my name is isse </p>";
 
-echo $string1."".$string2;
+echo $string1."".$string2; 
 
 $myNumber = 45;
 $calculation = $myNumber * 2 + 1 ;
@@ -149,7 +149,7 @@ if ($_POST) {
 
 
 
-/*SEE PART 17 OF MY WORK BOOK! 
+/*SEE PART 17 OF MY WORK BOOK!
 $emailTo = "isse@hotmail.com";
 $subject = "i hope youre well";
 $body = "i hope i see u soon";
