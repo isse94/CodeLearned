@@ -258,6 +258,110 @@
 // };
 
 
+// ////////////////// ORRRRR THREE SUM (practice 2)
+// var nums = [-1,0,1,2,-1,-4] ;
+// // [-4,-1,-1,0,1,2]
+// nums = nums.sort((a,b) => a-b);
+// var result = [];
+// function threeSum() {
+//
+//   for (let i = 0; i < nums.length - 3 ; i++) {
+//
+//   // nums[i];-4,-1..........
+//   let l1 = i + 1 ;  //-1,-1,0
+//   let r1 = nums.length - 1 // 2
+//   if (nums[i-1] < nums[i]) { // mainCONDTION-1 previous value less that current. STOPS DUPLICATES
+//
+//   while (l1 < r1 ) { // mainCONDTION-2 conditon of exacution happening as long as we are with last array index..  e.g. index of 5 <  index 6 (5 is where l1 will stop OTHERWISE IT WILL KEEP ON RUNNING THEREFORE CRASH SITE)
+  ///**  execution of what we are trying to find out.(which is the sum) **
+//     let sum = nums[i] + nums[l1] + nums[r1];  // start of finding sum
+//     // console.log(sum);
+//     if (sum === 0) { //
+//     result.push([nums[i] , nums[l1] , nums[r1]])     // while all while conditions(below while's) are run they are put through this if.
+//     }
+      // ** if execution of what we are finding is not met then exacuate the following if n else conditions to find it ***
+//     if (sum < 0) {
+//       let l2 = l1; // IMPORTANT to capture it and then move it along
+//       while (l2 === l1 && l1 < r1 ) {  //run while1 l2 < r1 condition ^ is linked.. & therefore l2++ (the result of incrementing of 1 is run back again into flow of while1 condtion)
+//         l1 ++;
+//       }
+//     }
+//     else {
+//       let r2 = r1; // IMPORTANT to capture it and then move it along backwards 1
+//       while (r1 === r2 && l1 < r1) { //  else decrement of -1 run into while-condition1
+//         r1--
+//       }
+//     }
+//
+//   } // end of while1
+//
+//
+//   } // end of if 1
+//   } // end of loop1
+//
+//
+//
+//
+// }  // end of function
+//
+// threeSum(nums)
+// console.log(result);
+/////////// OR USE THIS FORLOOP: (for three sum)
+// for (let i = 0; i < nums.length -3 ; i++) {
+// let l1 = i + 1;
+// let r1 = nums.length - 1;
+//
+// if (nums[i-1] < nums[i]) {
+//
+// while (l1 < r1) {
+//   let sum = nums[i] + nums[l1] + nums[r1];
+//   if (sum === 0) {
+//     result.push([nums[i], nums[l1],  nums[r1]])
+//   }
+//   if (sum < 0) {
+//     let l2 = l1;
+//     while (l1 === l2 && l1 < r1) {
+//       l1 ++;
+//     }
+//   }
+//   else {
+//     let r2 = r1;
+//     while (r1 === r2 && l1 < r1) {
+//       r1--;
+//     }
+//   }
+//
+// }
+//
+//
+// }
+//
+//
+// }
+
+///////// OR USE... for threeSum (NEED TO figure out how to remove duplicates in this one)
+// function threeSum() {
+//         nums = nums.sort((a, b) => a - b); // [-4,-1,-1,0,1,2]
+//         for (let i = 0; i < nums.length - 2; i++) {
+//         for (let j = i + 1; j < nums.length - 1; j++) {
+//         for (let k = j + 1; k < nums.length; k++) {
+//           const a = nums[i];
+//           const b = nums[j];
+//           const c = nums[k]
+//           let sum = a + b + c;
+//           if (sum === 0 && result.indexOf(nums) === -1) {
+//             result.push([a , b , c]);
+//           }
+//
+//         }
+//         }
+//         }
+//         return result;
+// }
+//
+// threeSum(nums);
+// console.log(result);
+
 
 
 
