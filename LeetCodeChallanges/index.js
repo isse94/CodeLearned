@@ -62,7 +62,28 @@
 //   console.log(housing);
 
   /////////////////////////////////////
+////////// MY FINAL VERSION;
+// let housing = [17,16,15,30,19,67,12,11,5];
+// let addHouse = 111;
+// function findHouseNum() {
+//     for (let i = 0; i < 1; i++) {
+        
+//         if (housing[i] === addHouse) {
+//             console.log(`house ${housing[i]} already exisits `);
+//              }
+//         else {
+//             housing.push(addHouse);
+//             console.log(`house number ${addHouse} added to housing postal`);
+//             console.log(addHouse);
+            
+//         }     
+        
+        
+//     }
+// }
 
+// findHouseNum(housing, addHouse);
+// console.log(housing);
 
 
 //2Sum ----
